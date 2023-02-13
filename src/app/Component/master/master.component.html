@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="cl-md-8">
+            <table border="1">
+                <tr>
+                    <th>Employee Id</th>
+                    <th>Employee Name</th>
+                    <th>Employee Address</th>
+                    <th>Details</th>
+                </tr>
+                <tr *ngFor="let emp of employees">
+                    <td>{{emp.Id}}</td>
+                    <td>{{emp.Name}}</td>
+                    <td>{{emp.Address}}</td>
+                    <td>
+                        <button class="btn btn-outline-primary" style="background-color: aquamarine;" (click)="onEdit(emp)">Edit
+                            <i class="fa fa-eye"></i></button>
+                        
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <app-emp-details [selectedEmp]="selectedEmp"></app-emp-details>
+        </div>
+    </div>
+</div>
+
+
